@@ -63,10 +63,10 @@ const Tag = (props) => {
       <br></br>
       <br></br>
       <div className="field">
-        <div class="ui large buttons">
-          <button class="ui negative button" onClick={()=>setResult(1)}>Positive</button>
-          <div class="or"></div>
-          <button class="ui positive button " onClick={()=>setResult(0)}>Negative</button>
+        <div className="ui large buttons">
+          <button className="ui negative button" onClick={()=>setResult(1)}>Positive</button>
+          <div className="or"></div>
+          <button className="ui positive button " onClick={()=>setResult(0)}>Negative</button>
         </div>
       </div>
       <br></br>
@@ -76,15 +76,15 @@ const Tag = (props) => {
         </div>
       </div>
       {success ? (
-        <div class="ui positive message">
-          <i class="close icon"></i>
-          <div class="header">Details Updated</div>
+        <div className="ui positive message">
+          <i className="close icon"></i>
+          <div className="header">Details Updated</div>
         </div>
       ) : null}
       {success === false ? (
-        <div class="ui negative message">
-          <i class="close icon"></i>
-          <div class="header">Error occured</div>
+        <div className="ui negative message">
+          <i className="close icon"></i>
+          <div className="header">Error occured</div>
         </div>
       ) : null}
     </div>

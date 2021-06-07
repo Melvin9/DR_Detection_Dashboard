@@ -22,7 +22,7 @@ const PrescriptionList = (props) => {
         <tbody>
           {search?props.value.filter((p)=>p[Object.keys(search)[0]]===search[Object.keys(search)[0]]).map((patient, i) => {
             return (
-              <tr>
+              <tr key={i}>
                 <td>{patient.PatientID}</td>
                 <td>
                   <Link to={"/patient/" + patient.PatientID}>
@@ -31,9 +31,9 @@ const PrescriptionList = (props) => {
                 </td>
                 <td>
                   {patient.Gender === "M" ? (
-                    <i class="male icon"></i>
+                    <i className="male icon"></i>
                   ) : (
-                    <i class="female icon"></i>
+                    <i className="female icon"></i>
                   )}
                 </td>
                 <td
@@ -47,7 +47,7 @@ const PrescriptionList = (props) => {
             );
           }):props.value.map((patient, i) => {
             return (
-              <tr>
+              <tr key={i}>
                 <td>{patient.PatientID}</td>
                 <td>
                   <Link to={"/patient/" + patient.PatientID}>
@@ -56,9 +56,9 @@ const PrescriptionList = (props) => {
                 </td>
                 <td>
                   {patient.Gender === "M" ? (
-                    <i class="male icon"></i>
+                    <i className="male icon"></i>
                   ) : (
-                    <i class="female icon"></i>
+                    <i className="female icon"></i>
                   )}
                 </td>
                 <td

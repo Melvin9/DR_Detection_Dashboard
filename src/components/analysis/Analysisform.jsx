@@ -86,12 +86,12 @@ const Form = (props) => {
           <br></br>
           <div className="ui form">
             <div className="field">
-              <textarea onChange={onObservationChange}>
-                {props.value.filter((patient) => patient.PatientID === ID)[0]
+              <textarea onChange={onObservationChange} value={props.value.filter((patient) => patient.PatientID === ID)[0]
                   .Observation
                   ? props.value.filter((patient) => patient.PatientID === ID)[0]
                       .Observation
-                  : null}
+                  : null}>
+              
               </textarea>
             </div>
           </div>
@@ -102,28 +102,27 @@ const Form = (props) => {
           <br></br>
           <div className="ui form">
             <div className="field">
-              <textarea onChange={onPrescriptionChange}>
-                {props.value.filter((patient) => patient.PatientID === ID)[0]
+              <textarea onChange={onPrescriptionChange} value={props.value.filter((patient) => patient.PatientID === ID)[0]
                   .Prescription
                   ? props.value.filter((patient) => patient.PatientID === ID)[0]
                       .Prescription
-                  : null}
+                  : null}>
               </textarea>
             </div>
           </div>
         </div>
         <div className="row">
           <br></br>
-          <div className="ui button" tabindex="0" onClick={handleSubmit}>
+          <div className="ui button" onClick={handleSubmit}>
             Submit
           </div>
-          {success?<div class="ui positive message">
-            <i class="close icon"></i>
-            <div class="header">Details Updated</div>
+          {success?<div className="ui positive message">
+            <i className="close icon"></i>
+            <div className="header">Details Updated</div>
           </div>:null}
-          {success===false?<div class="ui negative message">
-            <i class="close icon"></i>
-            <div class="header">Error occured</div>
+          {success===false?<div className="ui negative message">
+            <i className="close icon"></i>
+            <div className="header">Error occured</div>
           </div>:null}
           
         </div>

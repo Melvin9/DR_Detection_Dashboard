@@ -18,7 +18,7 @@ const Routes = () => {
 
     useEffect(() => {
       setID(sessionStorage.getItem("DoctorID"))
-      console.log(ID);
+      console.log(sessionStorage.getItem("DoctorID"));
       fetch(`https://lit-falls-40108.herokuapp.com/patients`)
         .then((res) => res.json())
         .then((result) => {
@@ -27,7 +27,7 @@ const Routes = () => {
         .catch((err) => {
           /* perform error handling if desired */
         });
-    }, []);
+    },[ID]);
   return (
     <BrowserRouter>
       <Switch>

@@ -50,7 +50,7 @@ const Sidebar = (props, { defaultActive, }) => {
                 {SidebarData.map((data, index) => {
                     return (
                         <Menu.Item key={index} onClick={() => {
-                            props.onChange(index);
+                            // props.onChange(index);
                         }}><Link to={data.path}>{data.title}</Link></Menu.Item>)
                 })}
             </Menu>

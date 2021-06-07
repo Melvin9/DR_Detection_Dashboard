@@ -33,9 +33,9 @@ const Dashboard = () => {
           <List value={data} />
         </div>
       ) : (
-        <div class="ui segment" style={{padding:50}}>
-          <div class="ui active inverted dimmer">
-            <div class="ui text loader">Loading</div>
+        <div className="ui segment" style={{padding:50}}>
+          <div className="ui active inverted dimmer">
+            <div className="ui text loader">Loading</div>
           </div>
           <p></p>
         </div>
